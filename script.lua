@@ -1,4 +1,23 @@
--- BOOGS TERMINAL • ULTIMA OVERLORD SUITE V26.2
+-- THE LOCK SYSTEM
+local correctPassword = "XenoBlink2026" -- This matches what you put in Pastebin
+
+-- This forces a popup box to appear in Roblox asking the user for the password
+local userPassword = game:GetService("Players").LocalPlayer:FindFirstChild("PlayerGui"):WaitForChild("Chat"):FindFirstChild("Frame") -- (Or any simple custom text box UI you make)
+
+-- For a basic test, let's just use a variable. 
+-- In your actual UI textbox, you will set _G.EnteredPassword to whatever they type.
+if _G.EnteredPassword == correctPassword then
+    print("Password Correct! Loading Xeno features...")
+    
+    -- ==========================================
+    -- PASTE THE REST OF YOUR ACTUAL SCRIPT HERE
+    -- (Your Blink, Fast Reload, No Fall Damage)
+    -- ==========================================
+
+else
+    -- If they type the wrong password, or don't have one, the script shuts off.
+    game:GetService("Players").LocalPlayer:Kick("Wrong Password! Get it free at your-lootlabs-link-here")
+end-- BOOGS TERMINAL • ULTIMA OVERLORD SUITE V26.2
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local RunService = game:GetService("RunService")
